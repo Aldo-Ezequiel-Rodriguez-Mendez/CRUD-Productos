@@ -4,39 +4,49 @@ from config import BaseConfig
 from app import db,bcrypt
 
 class User(db.Model):
-    __tablename__ ="users"
-    id=db.Column(db.Integer,primary_key=True,autoincrement=True)
-    email = db.Column(db.String(255),unique=True)
-    password = db.Column(db.String(255),nullable=False)
-    registered_on = db.Column(db.DateTime,nullable=False)
-    admin = db.Column(db.Boolean,nullable=False,default=False)
+    __tablename__ = "users"
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    email = db.Column(db.String(255), unique=True, nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    registered_on = db.Column(db.DateTime, nullable=False)
+    admin = db.Column(db.Boolean, nullable=False, default=False)
 
-    def __init__(self,email,password,admin=False) -> None:
-        self.email=email
-        self.password=bcrypt.generate_password_hash(password,BaseConfig.BCRYPT_LOG_ROUNDS).decode()
-        self.registered_on=datetime.datetime.now()
-        self.admin=admin
+    def __init__(self, email, password, admin=False):
+        self.email = email
+        self.password = bcrypt.generate_password_hash(
+            password,BaseConfig.BCRYPT_LOG_ROUNDS
+        ).decode()
+        
+        self.registered_on = datetime.datetime.now()
+        self.admin = admin
 
-    def encode_auth_token(self,user_id):
+    def encode_auth_token(self, user_id):
         try:
-            payload={
-                'exp':datetime.datetime.utcnow() + datetime.timedelta(days=1,minutes=10),
-                'iat':datetime.datetime.utcnow(),
-                'sub':user_id
+            payload = {
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=30),
+                'iat': datetime.datetime.utcnow(),
+                'sub': user_id
             }
-            return jwt.encode(payload,BaseConfig.SECRET_KEY,algorithm="HS256")
+            return jwt.encode(
+                payload,
+                BaseConfig.SECRET_KEY,
+                algorithm='HS256'
+            )
         except Exception as e:
             return e
-    
+
     @staticmethod
     def decode_auth_token(auth_token):
-        try :
-            payload = jwt.decode(auth_token,BaseConfig.SECRET_KEY,algorithms=['HS256'])
-            return payload('sub')
+        try:
+            payload = jwt.decode(auth_token, BaseConfig.SECRET_KEY,algorithms=['HS256'])
+            return payload['sub']
         except jwt.ExpiredSignatureError as e:
-            return "Token expirado"
+            print(e)
+            return 'Signature expired. Please log in again.'
         except jwt.InvalidTokenError as e:
-            return "Token no valido"
+            print(e)
+            return 'Invalid token. Please log in again.'
+
 
 class Images(db.Model):
     __tablename__ = 'user_images' 
@@ -53,13 +63,14 @@ class Images(db.Model):
         return f'Pic ID: {self.id} Data: {self.data} text: {self.text} user: {self.user_id}'
 
 class Producto (db.Model):
+    __tablename__ ="productos"
     id_producto = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(250))
     categoria = db.Column(db.String(250))
     serie = db.Column(db.String(250))
     
-    def __str__(self) -> str:
-        return (f'ID producto:{self.id_producto},'
-                f'Nombre:{self.nombre},' 
-                f'Categoria:{self.categoria},'
-                f'Serie:{self.serie}')
+    def __init__(self,id_producto,nombre,categoria,serie) -> None:
+        self.id_producto = id_producto
+        self.nombre=nombre
+        self.categoria=categoria
+        self.serie=serie

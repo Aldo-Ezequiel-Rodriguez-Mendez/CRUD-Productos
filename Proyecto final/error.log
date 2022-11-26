@@ -1,0 +1,288 @@
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2022 08:50:58] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2022 08:52:46] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2022 08:52:47] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2022 08:52:48] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2022 08:52:48] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2022 08:52:48] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [23/Nov/2022 09:34:39] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 13:59:08] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 13:59:36] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 13:59:43] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 13:59:50] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:00:32] "POST /auth/registro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:00:41] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:01:13] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:01:18] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:01:19] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:02:33] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /producto/1 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'appProducto.borrarUno' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:06:42] "[35m[1mDELETE /producto/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /producto/1 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'appProducto.borrarUno' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:09:41] "[35m[1mDELETE /producto/1 HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /producto/2 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'appProducto.borrarUno' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:09:52] "[35m[1mDELETE /producto/2 HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:12:11] "DELETE /producto/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:12:20] "DELETE /producto/4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:12:24] "DELETE /producto/6 HTTP/1.1" 200 -
+ERROR:app:Exception on /producto [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'appProducto.borrarTodos' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:12:43] "[35m[1mDELETE /producto HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:13:16] "DELETE /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:13:43] "POST /auth/login HTTP/1.1" 200 -
+ERROR:app:Exception on /producto [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\auth.py", line 45, in verificar
+    return f(info['data'], *args, **kwargs)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\producto\producto.py", line 83, in borrarTodos
+    db.session.delete()
+TypeError: delete() missing 1 required positional argument: 'instance'
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:13:56] "[35m[1mDELETE /producto HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on /producto [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2700, in delete
+    state = attributes.instance_state(instance)
+AttributeError: 'str' object has no attribute '_sa_instance_state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\auth.py", line 45, in verificar
+    return f(info['data'], *args, **kwargs)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\producto\producto.py", line 83, in borrarTodos
+    db.session.delete('*')
+  File "<string>", line 2, in delete
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 2702, in delete
+    util.raise_(
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 210, in raise_
+    raise exception
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.str' is not mapped
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:14:29] "[35m[1mDELETE /producto HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:17:16] "DELETE /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:17:23] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:19:03] "DELETE /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:19:08] "DELETE /producto/1 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:19:54] "DELETE /producto/4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:20:05] "DELETE /producto/6765 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:20:10] "DELETE /producto/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:26:57] "POST /uploadPerfil HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:28:05] "GET /usuarios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:28:22] "GET /usuarios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:28:52] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:28:59] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:29:00] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:29:00] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:29:01] "[31m[1mGET /auth/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:29:08] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:29:22] "GET /usuarios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:29:40] "POST /uploadPerfil HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:30:03] "POST /uploadPerfil HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:30:30] "POST /uploadPerfil HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:31:25] "POST /uploadPerfil HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:34:32] "POST /auth/registro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:34:40] "POST /auth/registro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:34:47] "POST /auth/registro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:34:57] "POST /auth/registro HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:34:59] "GET /usuarios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:35:22] "POST /auth/login HTTP/1.1" 200 -
+ERROR:app:Exception on /usuarios [GET]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2134, in make_response
+    raise TypeError(
+TypeError: The view function for 'appUser.getUsers' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:35:33] "[35m[1mGET /usuarios HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:35:57] "POST /auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:36:05] "GET /usuarios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:36:25] "POST /uploadPerfil HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:36:48] "POST /uploadPerfil HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:49:44] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:49:53] "GET /producto HTTP/1.1" 200 -
+ERROR:app:Exception on /producto [POST]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\auth.py", line 45, in verificar
+    return f(info['data'], *args, **kwargs)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\producto\producto.py", line 50, in registro
+    productoExists = Producto.query.filter_by(id_producto=product['id_producto']).first()
+KeyError: 'id_producto'
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:51:25] "[35m[1mPOST /producto HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:51:37] "POST /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:51:46] "POST /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:51:57] "POST /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:52:36] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:52:42] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:52:51] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:52:55] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:53:33] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:53:36] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:53:45] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:55:34] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:57:16] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:57:41] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:57:49] "PATCH /producto HTTP/1.1" 200 -
+ERROR:app:Exception on /producto [PATCH]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\auth.py", line 45, in verificar
+    return f(info['data'], *args, **kwargs)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\producto\producto.py", line 74, in actualizar
+    productoExists.nombre = product['nombre']
+AttributeError: 'NoneType' object has no attribute 'nombre'
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:58:02] "[35m[1mPATCH /producto HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /producto [PATCH]
+Traceback (most recent call last):
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\auth.py", line 45, in verificar
+    return f(info['data'], *args, **kwargs)
+  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\producto\producto.py", line 74, in actualizar
+    productoExists.nombre = product['nombre']
+AttributeError: 'NoneType' object has no attribute 'nombre'
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:58:16] "[35m[1mPATCH /producto HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 14:59:56] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 15:00:00] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 15:00:07] "GET /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 15:00:15] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 15:01:12] "PATCH /producto HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2022 15:01:22] "GET /producto HTTP/1.1" 200 -

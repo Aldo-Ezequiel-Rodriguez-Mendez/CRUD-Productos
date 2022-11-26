@@ -38,7 +38,7 @@ def tokenCheck(f):
             info = obtenerInfo(token)
             print(info)
             if info['status'] == "fail":
-                return jsonify({'message': 'token is invalid'})
+                return jsonify({'message': 'token is '})
         except:
             return jsonify({'message': 'token is invalid'})
         print("hi")
