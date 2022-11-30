@@ -1,0 +1,29 @@
+form {
+    display: block;
+    margin-top: 0em;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+    
+}
+
+h1 {
+    font-size: 30px;
+ 
+    margin: 30px;
+    
+}
+p{
+    text-align: left;
+    font-size: 20px;
+    margin:30px ;
+    padding:0;
+}
+
+#button{
+    font-size:30px;
+}

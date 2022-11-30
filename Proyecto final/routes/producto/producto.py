@@ -1,108 +1,80 @@
-from flask import Blueprint,request,jsonify
+from flask import Blueprint, redirect, render_template,request,jsonify, url_for
 from sqlalchemy import exc
+from forms import ProductoForm
 from models import Producto,User
 from app import db, bcrypt
-from auth import tokenCheck
+from auth import obtenerInfo, tokenCheck
 appProducto = Blueprint('appProducto',__name__,template_folder="template") #Aqui es donde ponemos el nombre de nuestras vistas, template puede ser cualquier nombre.
 
-@appProducto.route('/producto',methods=['GET'])
-@tokenCheck
-def mostrarTodos(usuario):
-    print(usuario)
-    print(usuario['admin'])
-    if usuario['admin'] or not usuario['admin']:
-        output = []
+@appProducto.route('/productos/<string:token>',methods=['GET'])
+def verProductos(token):
+    admin = obtenerInfo(token)
+    if admin['admin'] or not admin['admin']:
         productos = Producto.query.all()
-        for producto in productos:
-            productoData = {}
-            productoData['id_producto'] = producto.id_producto
-            productoData['nombre'] = producto.nombre
-            productoData['categoria'] = producto.categoria
-            productoData['serie'] = producto.serie
-            output.append(productoData)
-        return jsonify({'productos':output})
+        return render_template('indexProducto.html', productos = productos,token = token) 
 
-@appProducto.route('/producto/<int:id>',methods=['GET'])
-@tokenCheck
-def mostrarUno(id,usuario):
-    print(usuario)
-    print(usuario['admin'])
-    if usuario['admin'] or not usuario['admin']:
+@appProducto.route('/producto/<int:id>/<string:token>',methods=['GET'])
+def mostrarUno(id,token):
+    admin = obtenerInfo(token)
+    if admin['admin'] or not admin['admin']:
         searchProducto = Producto.query.filter_by(id_producto=id).first()
         if searchProducto:
-            responseObje = {
-                "id_producto":searchProducto.id_producto,
-                "nombre":searchProducto.nombre,
-                "categoria":searchProducto.categoria,
-                "serie" : searchProducto.serie
-            }
-            return jsonify(responseObje)
-        return jsonify({"mensaje":"No existe el producto!"})
+            return render_template('detalleProducto.html', producto=searchProducto)
+        return render_template('error.html', error ='No existe el producto!')
 
 
-@appProducto.route('/producto',methods={'POST'})
-@tokenCheck
-def registro(usuario):
-    print(usuario)
-    print(usuario['admin'])
-    if usuario['admin'] or not usuario['admin']:
-        product = request.get_json( )
-        productoExists = Producto.query.filter_by(id_producto=product['id_producto']).first()
-        if  not productoExists:
-            producto = Producto(id_producto=product['id_producto'],nombre=product['nombre'],categoria=product['categoria'],serie=product['serie'])
-            try:
-                db.session.add(producto)
-                db.session.commit()
-                mensaje="Producto creado!"
-            except exc.SQLAlchemyError as e:
-                mensaje = "error: " + e
-        else:
-            mensaje = "El producto ya existe"
-        return jsonify({"mensaje":mensaje})
+@appProducto.route('/agregarProducto/<string:token>',methods=['GET','POST'])
+def registroProducto(token):
+    admin = obtenerInfo(token)
+    if admin['admin'] or not admin['admin']:
+        producto = Producto(id_producto='',nombre='',categoria='',serie='')
+        productoForm = ProductoForm(obj=producto)
+        if request.method == "POST":
+            if productoForm.validate_on_submit():
+                productoForm.populate_obj(producto)
+                searchProducto = Producto.query.filter_by(id_producto=producto.id_producto).first()
+                if not searchProducto:
+                    #insert
+                    db.session.add(producto)
+                    db.session.commit()
+                    return redirect(url_for('inicio'))
+                return render_template('error.html', error ='El producto ya existe!')
+        return render_template('agregarProducto.html',forma = productoForm)
 
-@appProducto.route('/producto', methods=['PATCH'])
-@tokenCheck
-def actualizar(usuario):
-    print(usuario)
-    print(usuario['admin'])
-    if usuario['admin'] or not usuario['admin']:
-        product = request.get_json( )
-        searchProducto = Producto.query.filter_by(id_producto=product['id_producto']).first()
-        if  searchProducto:
-            try:
-                searchProducto.nombre = product['nombre']
-                searchProducto.categoria = product['categoria']
-                searchProducto.serie = product['serie']
-                db.session.commit()
-                mensaje="Producto actualizado!"
-            except exc.SQLAlchemyError as e:
-                mensaje = "error: " + e
-        else:
-            mensaje = "El producto no existe!"
-        return jsonify({"mensaje":mensaje})
+@appProducto.route('/editar/<int:id>/<string:token>', methods=['GET','POST'])
+def actualizar(id,token):
+    admin = obtenerInfo(token)
+    if admin['admin'] or not admin['admin']:
+        searchProducto = Producto.query.filter_by(id_producto=id).first()
+        if searchProducto:
+            productoForm = ProductoForm(obj=searchProducto)
+            if request.method == "POST":
+                if productoForm.validate_on_submit():
+                    productoForm.populate_obj(searchProducto)
+                    db.session.commit()
+                    return  redirect(url_for('inicio'))
+            return render_template('editarProducto.html',forma = productoForm)
+        return render_template('error.html', error ='No existe el producto!')
+    
 
 
-@appProducto.route('/producto/<int:id>', methods=['DELETE'])
-@tokenCheck
-def borrarUno(usuario,id):
-    print(usuario)
-    print(usuario['admin'])
-    if usuario['admin']:
+@appProducto.route('/eliminar/<int:id>/<string:token>')
+def borrarUno(id,token):
+    admin = obtenerInfo(token)
+    if admin['admin']:
         searchProducto = Producto.query.filter_by(id_producto=id).first()
         if searchProducto:
             db.session.delete(searchProducto)
             db.session.commit()
-            return jsonify({"mensaje":"Producto eliminado!"})
-        return jsonify({"mensaje":"No existe el producto!"})
-    return jsonify({"mensaje":"Esta acción solamente es permitida por administradores!"})
+            return redirect(url_for('inicio'))
+        return render_template('error.html', error ='No existe el producto!')
+    return render_template('error.html', error='Esta acción solamente es permitida por administradores!')
 
-@appProducto.route('/producto', methods=['DELETE'])
-@tokenCheck
-def borrarTodos(usuario):
-    print(usuario)
-    print(usuario['admin'])
-    if usuario['admin']:
+@appProducto.route('/eliminarTodo/<string:token>')
+def borrarTodos(token):
+    admin = obtenerInfo(token)
+    if admin['admin']:
         db.session.query(Producto).delete()
         db.session.commit()
-        return "Productos eliminados!"
-    return jsonify({"mensaje":"Esta acción solamente es permitida por administradores!"})
+        return redirect(url_for('inicio'))
+    return render_template('error.html', error='Esta acción solamente es permitida por administradores!')

@@ -1,6 +1,6 @@
 from models import User
 from functools import wraps
-from flask import request,jsonify
+from flask import render_template, request
 
 def obtenerInfo(token):
     if token:
@@ -9,12 +9,7 @@ def obtenerInfo(token):
         if  user:
             usuario = {
                     'status': 'success',
-                    'data': {
-                        'user_id': user.id,
-                        'email': user.email,
-                        'admin': user.admin,
-                        'registered_on': user.registered_on
-                    }
+                    'admin': user.admin
                 }
             return usuario
         else:
@@ -29,18 +24,15 @@ def tokenCheck(f):
     @wraps(f)
     def verificar(*args, **kwargs):
         token = None
-        if 'token' in request.headers:
-            token = request.headers['token']
 
-        if not token:
-            return jsonify({'message': 'token no encontrado'})
+        token = request.form['token']
+    
         try:
             info = obtenerInfo(token)
-            print(info)
             if info['status'] == "fail":
-                return jsonify({'message': 'token is '})
+                return render_template('error.html', error = 'El token es inválido')
         except:
-            return jsonify({'message': 'token is invalid'})
-        print("hi")
-        return f(info['data'], *args, **kwargs)
+            return render_template('error.html', error = 'El token es inválido')
+        return (info['admin'])
     return verificar
+
