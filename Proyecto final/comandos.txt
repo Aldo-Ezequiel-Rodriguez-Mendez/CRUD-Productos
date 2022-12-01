@@ -1,8 +1,8 @@
 //ABRIR LA CARPETA DEL PROYECTO CON LA TERMINAL
 
-py -3 -m venv .venv --para instalar el entorno virtual
+py -3 -m venv .venv 		<--para instalar el entorno virtual
 
-.venv/Scripts/activate --para activar el entorno virtual
+.venv/Scripts/activate 		<--para activar el entorno virtual
 
 pip install flask 
 pip install flask_bcrypt
@@ -13,9 +13,9 @@ pip install flask-wtf
 pip install Flask-Migrate
 pip install psycopg2
 
-flask run --sirve para correr el servidor
+flask run 		<--sirve para correr el servidor
 
-flask db init --crear carpetas dentro del proyecto 
-flask db migrate -- migraciones  
-flask db upgrade -- para crear las tablas  
+flask db init 		<--crear carpetas dentro del proyecto 
+flask db migrate 	<-- migraciones  
+flask db upgrade 	<-- para crear las tablas  
 flask db stamp head 8
