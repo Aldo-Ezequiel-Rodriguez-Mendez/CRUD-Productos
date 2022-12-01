@@ -1,336 +1,116 @@
-ERROR:app:Exception on /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzNzk0NzIsImlhdCI6MTY2OTc4NzQ3Miwic3ViIjo3fQ.DVnbBprtGIMC0qlXDE-zInG_Tfg_okBWF7BoooAl_Kg [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 49, in verUsuarios
-    return render_template('indexUsuario.html', usuarios = usuarios,token = token)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\templates\indexUsuario.html", line 40, in template
-    <!-- <td><a class="link-info" href="{{ url_for ('appUsuario.Imagen',id = token = token)}}">Ver</a></td> -->
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got '='
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:51:30] "[35m[1mGET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzNzk0NzIsImlhdCI6MTY2OTc4NzQ3Miwic3ViIjo3fQ.DVnbBprtGIMC0qlXDE-zInG_Tfg_okBWF7BoooAl_Kg HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:04:53] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:04:53] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:00] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:00] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:02] "GET /salir HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:02] "[36mGET /static/estilos/error.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:03] "[32mGET /menu HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:03] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:03] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:07] "GET /menu?usuario=admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:07] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:08] "GET /productos/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxMDcsImlhdCI6MTY2OTkwNzEwNywic3ViIjo3fQ.DfgYeCOU8dFkGdDLVO_8g6sX-uSCt4K6_oIVABvUo8I HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:08] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:23] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:23] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:24] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxMjMsImlhdCI6MTY2OTkwNzEyMywic3ViIjo3fQ.z-Jq-oUaP0BZ11yC0i24cYP3ZhBGJXT9tg5w4x_mqAk HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:24] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:28] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:28] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:33] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxMjgsImlhdCI6MTY2OTkwNzEyOCwic3ViIjo3fQ.74aiKzYB4Nk-TRKiKzgFAM0fkJ_AL99OTuMV8AFA38A HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:33] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:34] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:34] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:35] "GET /productos/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxMzQsImlhdCI6MTY2OTkwNzEzNCwic3ViIjo3fQ.vNnIUjibFTcZZrbO80zjy6reOLWYL5mx6SBbmDb1c-E HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:35] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:37] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:37] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:39] "GET /salir HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:39] "[36mGET /static/estilos/error.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:40] "[32mGET /menu HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:40] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:40] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:44] "GET /menu?usuario=aldo HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:44] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:45] "GET /productos/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxNDQsImlhdCI6MTY2OTkwNzE0NCwic3ViIjo1fQ.4UjfQLBP-1BWvpSQb9BEgxyKn2U3M0oC5Qr8ttm7Rk0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:45] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:47] "GET /eliminarTodo/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxNDQsImlhdCI6MTY2OTkwNzE0NCwic3ViIjo1fQ.4UjfQLBP-1BWvpSQb9BEgxyKn2U3M0oC5Qr8ttm7Rk0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:47] "[36mGET /static/estilos/error.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:48] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:48] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:49] "GET /productos/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxNDgsImlhdCI6MTY2OTkwNzE0OCwic3ViIjo1fQ.G0YU3ohPY8Ths0XyZ_COGKXbLVNkbbRpPjjRdo7relg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:49] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:50] "GET /eliminar/9/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxNDgsImlhdCI6MTY2OTkwNzE0OCwic3ViIjo1fQ.G0YU3ohPY8Ths0XyZ_COGKXbLVNkbbRpPjjRdo7relg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:50] "[36mGET /static/estilos/error.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:51] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:51] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:52] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxNTEsImlhdCI6MTY2OTkwNzE1MSwic3ViIjo1fQ.yKepZ-WOZZRXQ-FXddcMlELYzZk4tmlI1GmtuCP5WMI HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:52] "[36mGET /static/estilos/error.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:53] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:53] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:55] "GET /productos/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkxNTMsImlhdCI6MTY2OTkwNzE1Mywic3ViIjo1fQ.f07shOMxo8rMYWJB-o1nNiDHfJJtNo878g-NCJ80c5s HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:05:55] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:44] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:44] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:46] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkzMjQsImlhdCI6MTY2OTkwNzMyNCwic3ViIjo1fQ.eAwffA-XhBjWnOU4vE8b9ugO-NchDfcJGDy7PzjhcuA HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:46] "[36mGET /static/estilos/error.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:47] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:47] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:48] "GET /productos/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTkzMjcsImlhdCI6MTY2OTkwNzMyNywic3ViIjo1fQ.vm5Eel-T4J-u-CUwI4UrluKjOiedIcNTfE4unUjFS4E HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:48] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:49] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:49] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:50] "GET /salir HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:50] "[36mGET /static/estilos/error.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:52] "[32mGET /menu HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:52] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:52] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:57] "[32mGET /menu HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:57] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:08:57] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:34] "GET /menu?usuario=admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:34] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:35] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTk1NTQsImlhdCI6MTY2OTkwNzU1NCwic3ViIjo3fQ.fABe95CR_tt0M84Q5JRPDM7AaZaPRQ5xMEmIQhAtxOs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:35] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:36] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:36] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:37] "GET /productos/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTk1NTYsImlhdCI6MTY2OTkwNzU1Niwic3ViIjo3fQ.NTzWO0xSg469ONvfB6Mt7vUBIybuIP3tnQPcBW0HFKg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:37] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:39] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:12:39] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:13:25] "GET /productos/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0OTk1NTksImlhdCI6MTY2OTkwNzU1OSwic3ViIjo3fQ.F6tLSZHp8IMweZIVXXmoQOiDF5hCeQjYwdsCxlIlqtc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:13:25] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:13:27] "GET /menu HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:13:27] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:08] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:11] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:11] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:13] "GET /salir HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:13] "[36mGET /static/estilos/error.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:14] "[32mGET /menu HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:17] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:17] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:17] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:21] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:21] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:14:21] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:21:43] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:21:43] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:21:43] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:52:29] "[33mGET /loginoAl_Kg HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:52:33] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:52:33] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:52:37] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:52:37] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:52:37] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-ERROR:app:Exception on /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzNzk1NTcsImlhdCI6MTY2OTc4NzU1Nywic3ViIjo3fQ._t6CAh-J_1DNhwT9n0TJnB03mdxLOf2KlUzINkCn2Y8 [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 49, in verUsuarios
-    return render_template('indexUsuario.html', usuarios = usuarios,token = token)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\templates\indexUsuario.html", line 55, in template
-    <a class="btn btn-success" href="{{ url_for ('appUsuario.registroUsuario'}}">Agregar nuevo producto</a>
-jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:52:48] "[35m[1mGET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzNzk1NTcsImlhdCI6MTY2OTc4NzU1Nywic3ViIjo3fQ._t6CAh-J_1DNhwT9n0TJnB03mdxLOf2KlUzINkCn2Y8 HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:53:50] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:53:50] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:53:55] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:53:55] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:53:55] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-ERROR:app:Exception on /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzNzk2MzUsImlhdCI6MTY2OTc4NzYzNSwic3ViIjo3fQ.8LKIe9vo02Y75rChwsX90iXLRrZO4YM7nPnKdxy50mA [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 49, in verUsuarios
-    return render_template('indexUsuario.html', usuarios = usuarios,token = token)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\loaders.py", line 138, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 768, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\templates\indexUsuario.html", line 40, in template
-    <!-- <td><a class="link-info" href="{{ url_for ('appUsuario.Imagen',id = token = token)}}">Ver</a></td> -->
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got '='
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:53:57] "[35m[1mGET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzNzk2MzUsImlhdCI6MTY2OTc4NzYzNSwic3ViIjo3fQ.8LKIe9vo02Y75rChwsX90iXLRrZO4YM7nPnKdxy50mA HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:54:33] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:54:33] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:54:36] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:54:36] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:54:36] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-ERROR:app:Exception on /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzNzk2NzYsImlhdCI6MTY2OTc4NzY3Niwic3ViIjo3fQ.NRu5EcytT7IUk8gXBqS0JMkwihoOlvaIHFeVZoNygi4 [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 49, in verUsuarios
-    return render_template('indexUsuario.html', usuarios = usuarios,token = token)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\templating.py", line 130, in _render
-    rv = template.render(context)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\templates\indexUsuario.html", line 40, in top-level template code
-    <!-- <td><a class="link-info" href="{{ url_for ('appUsuario.Imagen',token = token)}}">Ver</a></td> -->
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'appUsuario.Imagen' with values ['token']. Did you mean 'appUser.verUsuarios' instead?
-INFO:werkzeug:127.0.0.1 - - [29/Nov/2022 23:54:37] "[35m[1mGET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzNzk2NzYsImlhdCI6MTY2OTc4NzY3Niwic3ViIjo3fQ.NRu5EcytT7IUk8gXBqS0JMkwihoOlvaIHFeVZoNygi4 HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:01] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:01] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:05] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:05] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:05] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-ERROR:app:Exception on /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzODAxMjUsImlhdCI6MTY2OTc4ODEyNSwic3ViIjo3fQ.Ba4Ih3kSypG31hQYSS7jaWMiHCzVsNWg-X5uzgMSuII [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 49, in verUsuarios
-    return render_template('indexUsuario.html', usuarios = usuarios,token = token)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\templating.py", line 130, in _render
-    rv = template.render(context)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\templates\indexUsuario.html", line 56, in top-level template code
-    <a class="btn btn-success" href="{{ url_for ('appUsuario.registroUsuario')}}">Agregar nuevo producto</a>
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2031, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2020, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\werkzeug\routing\map.py", line 917, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'appUsuario.registroUsuario'. Did you mean 'appUser.registroUsuario' instead?
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:07] "[35m[1mGET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzODAxMjUsImlhdCI6MTY2OTc4ODEyNSwic3ViIjo3fQ.Ba4Ih3kSypG31hQYSS7jaWMiHCzVsNWg-X5uzgMSuII HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:44] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:44] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:48] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:48] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:48] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:49] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzODAxNjgsImlhdCI6MTY2OTc4ODE2OCwic3ViIjo3fQ.19MVbq1O-5pmmGPJ_RnXWJdx3KVWILhc_lkwyzMwG4Q HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:49] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
-ERROR:app:Exception on /agregarUsuario [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 15, in registroUsuario
-    usuario = User(email='',password='')
-  File "<string>", line 4, in __init__
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\orm\state.py", line 481, in _initialize_instance
-    with util.safe_reraise():
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
-    compat.raise_(
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 210, in raise_
-    raise exception
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\models.py", line 16, in __init__
-    self.password = bcrypt.generate_password_hash(
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_bcrypt.py", line 184, in generate_password_hash
-    raise ValueError('Password must be non-empty.')
-ValueError: Password must be non-empty.
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:02:55] "[35m[1mGET /agregarUsuario HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:06:43] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:06:43] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:06:47] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:06:47] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:06:47] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:06:48] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzODA0MDcsImlhdCI6MTY2OTc4ODQwNywic3ViIjo3fQ.CcEzgoRNB8JhoGtDOY_npBIPWTqMhvhl0QX1wDN_9kQ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:06:48] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
-ERROR:app:Exception on /agregarUsuario [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 15, in registroUsuario
-    usuario = User(email='',password='')
-  File "<string>", line 4, in __init__
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\orm\state.py", line 481, in _initialize_instance
-    with util.safe_reraise():
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
-    compat.raise_(
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 210, in raise_
-    raise exception
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\sqlalchemy\orm\state.py", line 479, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\models.py", line 16, in __init__
-    self.password = bcrypt.generate_password_hash(
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_bcrypt.py", line 184, in generate_password_hash
-    raise ValueError('Password must be non-empty.')
-ValueError: Password must be non-empty.
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:06:49] "[35m[1mGET /agregarUsuario HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:08:54] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:08:55] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:08:59] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:08:59] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:08:59] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:00] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzODA1MzksImlhdCI6MTY2OTc4ODUzOSwic3ViIjo3fQ.jPAtWgdsUYFwG2e_GZ7ZbhBIR8Uywf5ME9xoDg3TptQ HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:00] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
-ERROR:app:Exception on /agregarUsuario [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 16, in registroUsuario
-    usuarioForm = User(obj=usuario)
-TypeError: __init__() got an unexpected keyword argument 'obj'
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:02] "[35m[1mGET /agregarUsuario HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:41] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:41] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:47] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:47] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:47] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:48] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzODA1ODcsImlhdCI6MTY2OTc4ODU4Nywic3ViIjo3fQ.pcVgwGkkHgXutPasLduEE6MaBwgTTrnChoAsyABGlX8 HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:48] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
-ERROR:app:Exception on /agregarUsuario [GET]
-Traceback (most recent call last):
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\routes\user\user.py", line 16, in registroUsuario
-    usuarioForm = User(obj=usuario)
-TypeError: __init__() got an unexpected keyword argument 'obj'
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:09:50] "[35m[1mGET /agregarUsuario HTTP/1.1[0m" 500 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:11:26] "GET /login HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:11:26] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:11:30] "[32mPOST /login HTTP/1.1[0m" 302 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:11:30] "GET /menu?usuario=admin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:11:30] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:11:31] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzIzODA2OTAsImlhdCI6MTY2OTc4ODY5MCwic3ViIjo3fQ.7zYI05uVa8NG_CexhxA_WLeMQtmWUkob3Q2gPY3J7Bc HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:11:31] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:30:12] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:30:12] "[36mGET /static/estilos/login.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:30:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:30:15] "GET /menu?usuario=admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:30:15] "[36mGET /static/estilos/menuPrincipal.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:30:20] "GET /usuarios/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDA2MTUsImlhdCI6MTY2OTkwODYxNSwic3ViIjo3fQ.YFSD2V-VN0dl3V_HFLfFpwHP-L6Qg6JbrpMs-ve05j0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:30:20] "[33mGET /static/css/index.css HTTP/1.1[0m" 404 -
 ERROR:app:Exception on /agregarUsuario [GET]
 Traceback (most recent call last):
   File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
@@ -359,4 +139,4 @@ Traceback (most recent call last):
   File "C:\Users\megaa\Documents\GitHub\CRUD-Productos\Proyecto final\.venv\lib\site-packages\flask_bcrypt.py", line 184, in generate_password_hash
     raise ValueError('Password must be non-empty.')
 ValueError: Password must be non-empty.
-INFO:werkzeug:127.0.0.1 - - [30/Nov/2022 00:11:32] "[35m[1mGET /agregarUsuario HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [01/Dec/2022 09:30:23] "[35m[1mGET /agregarUsuario?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI1MDA2MTUsImlhdCI6MTY2OTkwODYxNSwic3ViIjo3fQ.YFSD2V-VN0dl3V_HFLfFpwHP-L6Qg6JbrpMs-ve05j0 HTTP/1.1[0m" 500 -

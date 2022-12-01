@@ -48,14 +48,13 @@
                 <span class="input-group-text">Tu token</span>
                 <textarea class="form-control" aria-label="With textarea" readonly>{{token}}</textarea>
             </div>
-           
+        
         </div>
         <br>
         <div class="form-group col-sm-12 col-md-6 col-lg-6">
             <a class="btn btn-primary" href="{{ url_for('inicio')}}">Menu</a>
             <a class="btn btn-success" href="{{ url_for ('appProducto.registroProducto',token = token)}}">Agregar nuevo producto</a>
             <a class="btn btn-danger" href="{{ url_for ('appProducto.borrarTodos',token = token)}}">Eliminar todos los productos</a>
-          
         </div>
 
     </div>
@@ -65,4 +64,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
-   
