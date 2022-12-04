@@ -3,7 +3,6 @@ from sqlalchemy import exc
 from models import User
 from app import db, bcrypt
 from auth import obtenerInfo, tokenCheck
-from forms import UserForm
 from werkzeug.utils import redirect
 from werkzeug.exceptions import abort
 

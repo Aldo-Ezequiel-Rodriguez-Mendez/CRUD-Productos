@@ -30,9 +30,11 @@ def tokenCheck(f):
         try:
             info = obtenerInfo(token)
             if info['status'] == "fail":
-                return render_template('error.html', error = 'El token es inválido')
+                return render_template('error.html', 
+                error = 'El token es inválido')
         except:
-            return render_template('error.html', error = 'El token es inválido')
+            return render_template('error.html', 
+            error = 'El token es inválido')
         return (info['admin'])
     return verificar
 

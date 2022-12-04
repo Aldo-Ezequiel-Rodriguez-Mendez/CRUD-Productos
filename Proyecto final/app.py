@@ -6,8 +6,6 @@ from flask_migrate import Migrate
 from config import BaseConfig
 from auth import tokenCheck
 
-from forms import UserForm,ProductoForm
-
 
 from werkzeug.exceptions import abort
 from werkzeug.utils import redirect
